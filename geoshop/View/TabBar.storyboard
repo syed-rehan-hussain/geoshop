@@ -1,30 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jCz-vA-gaK">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Home-->
+        <scene sceneID="aSV-lS-PC4">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Home" id="yx1-Yt-AZb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="house.fill" catalog="system" id="GhK-65-WUK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFH-SU-pwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-773" y="396"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="mec-uC-44N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Browse" id="Ge6-CX-6fL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="square.stack.3d.up.fill" catalog="system" id="4Su-1L-IDn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xy-Ap-J92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="427"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="Ijh-Mf-efc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cart" id="elx-yS-ZAy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="bag.fill" catalog="system" id="Gki-tD-WVL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXE-Gx-36b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69" y="427"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="38d-nb-uAy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Account" id="DdS-mR-Xpr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill" catalog="system" id="Whx-Dy-o7g"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="won-k2-e4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="396"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xDh-ub-kh7">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="jCz-vA-gaK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xe3-12-Ea6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yx1-Yt-AZb" kind="relationship" relationship="viewControllers" id="Re7-DJ-0l8"/>
+                        <segue destination="Ge6-CX-6fL" kind="relationship" relationship="viewControllers" id="dJO-FY-sRo"/>
+                        <segue destination="elx-yS-ZAy" kind="relationship" relationship="viewControllers" id="5zM-4X-x3o"/>
+                        <segue destination="DdS-mR-Xpr" kind="relationship" relationship="viewControllers" id="94r-xe-Xtt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lo-GD-w10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289.3129770992366" y="-26.056338028169016"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.stack.3d.up.fill" catalog="system" width="120" height="128"/>
     </resources>
 </document>

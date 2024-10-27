@@ -16,14 +16,12 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnLoginAction(_ sender: Any) {
+        if let tabBarVC = storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController {
+                       tabBarVC.modalPresentationStyle = .fullScreen
+                       present(tabBarVC, animated: true, completion: nil)
+                   }
     }
-    */
+    
 
 }
